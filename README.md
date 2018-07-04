@@ -27,3 +27,5 @@ Tatum_face_encoding = face_recognition.face_encodings(Tatum_image)[0]  # 人脸�
 
 然后进行实时检测，其中face_recognition中人脸对比函数`face_recognition.compare_faces(known_face_encodings,face_encoding,tolerance=0.4)`中的`tolerance`的阈值设为0.4检测效果会更优，此阈值越低越严格。<br>
 
+人脸识别结果如下<br>
+![](https://cloud.githubusercontent.com/assets/896692/24430398/face1.gif)
