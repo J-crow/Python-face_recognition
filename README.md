@@ -23,17 +23,24 @@ Windows8.1 64位 Python版本`python3.6.3`<br>
 
 首先将已知的人脸的图片存入文件夹，然后通过face_recognition指向那个文件夹，生成相应的已知人脸的model<br>
 ```python
-Tatum_image = face_recognition.load_image_file("D:/GAMES/py3.6.3/face_id/known/jt.jpg")  # 人脸位置加载函数 返回一个人脸图像（人脸位置的上下左右）的列表，第一个参数是图像，第二个参数是多少倍的上采样图像寻找面孔，数字越大，寻找较小的面孔，第三个参数是人脸检测模型，默认是hog
-Tatum_face_encoding = face_recognition.face_encodings(Tatum_image)[0]  # 人脸数据化，返回一个128个向量的列表（用于对比），0为图像里面第一个人的索引
+Tatum_image = face_recognition.load_image_file("D:/GAMES/py3.6.3/face_id/known/jt.jpg") 
+# 人脸位置加载函数 返回一个人脸图像（人脸位置的上下左右）的列表，第一个参数是图像，第二个参数是多少倍的上采样图像寻找面孔，数字越大，寻找较小的面孔，第三个参数是人脸检测模型，默认是hog
+Tatum_face_encoding = face_recognition.face_encodings(Tatum_image)[0] 
+# 人脸数据化，返回一个128个向量的列表（用于对比），0为图像里面第一个人的索引
 ```
 <br>
 
 
 
 通过OpenCV打开电脑的摄像头<br>
-`video_capture = cv2.VideoCapture(0)  # 打开摄像头`<br>
-
-然后进行实时检测，其中face_recognition中人脸对比函数`face_recognition.compare_faces(known_face_encodings,face_encoding,tolerance=0.4)`中的`tolerance`的阈值设为0.4检测效果会更优，此阈值越低越严格。<br>
+```python
+video_capture = cv2.VideoCapture(0)  # 打开摄像头
+```
+然后进行实时检测，其中face_recognition中人脸对比函数
+```python
+face_recognition.compare_faces(known_face_encodings,face_encoding,tolerance=0.4)
+```
+中的`tolerance`的阈值设为0.4检测效果会更优，此阈值越低越严格。<br>
 
 人脸识别结果如下<br>
 ![](https://github.com/J-crow/Python-face_recognition/blob/master/image/face1.gif)
