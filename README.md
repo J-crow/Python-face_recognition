@@ -12,3 +12,5 @@ Windows8.1 64位 Python版本`python3.6.3`<br>
 
 
 本文并没有使用OpenCV人脸检测的xml，通过对比face_recognition的xml，只能吐槽OpenCV的训练力度不够啊，face_recognition的是真的不错。几乎就没有错误的识别。<br>
+OpenCV的xml检测的结果![](https://github.com/J-crow/Python-face_recognition/blob/master/image/me.jpg)<br>
+face_recognition的xml检测的结果（已经进行了静态的人脸识别）![](https://github.com/J-crow/Python-face_recognition/blob/master/image/mayun.jpg)<br>
