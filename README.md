@@ -5,6 +5,8 @@
 本文的程序是模仿学习国外的大神的[face_recognition](https://github.com/ageitgey/face_recognition)
 
 Windows8.1 64位 Python版本`python3.6.3`<br>
+
+
 首先安装好OpenCV和face_recognition  `pip install face_recognition`,`pip install opencv_python`<br>
 安装这两个库之前要先安装对应版本的其他一些库，本文不在累赘叙述，安装的过程还是比较麻烦的。<br>
 但是本人并没有像大多数网上的方法那样，编译Boost，然后在编译dlib，而是对应安装了相应版本的库，然后成功的安装face_recognition。<br>
